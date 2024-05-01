@@ -1,0 +1,33 @@
+<aside class="aside">
+  <nav>
+    <ul class="aside__items nostyle-list">
+      <li class="aside__item">
+        <button class="btn" (click)="lineMode()">LINE</button>
+      </li>
+      <li class="aide__item">
+        <button class="btn" (click)="freeMode()">FREE</button>
+      </li>
+      <li class="aside__item">
+        <button class="btn" (click)="trashMode()">DELETE</button>
+      </li>
+      <li class="aside__item">
+        <button class="btn" (click)="extrudeMode()">EXTRUDE LAYER</button>
+      </li>
+      <li class="aside__item">
+        <button class="btn" (click)="deleteLayer()">DELETE LAYER</button>
+      </li>
+      <li class="aside__item">
+        <form [formGroup]="form">
+          <input
+            formControlName="heightInput"
+            type="text"
+            placeholder="height"
+          />
+          <button (click)="extrudePolygon()">SUBMIT</button>
+        </form>
+      </li>
+    </ul>
+  </nav>
+</aside>
+
+<div class="map" id="map"></div>
